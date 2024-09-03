@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método da Bisseção</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script src="bissecao.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="metodos">
+            <a href="#">Bisseção</a>
+            <a href="newton_raphson.html">Newton Raphson</a>
+        </div>
+        <a href="sobre.html">Sobre</a>
+    </div>
+
+    <div class="formula">
+        <h1>Método da Bisseção</h1>
+
+        <form id="form-bissecao">
+            <label for="funcao">Digite a função (ex: 5*x^3 - 5*x^2 + 6*x - 2):</label>
+            <input type="text" id="funcao" name="funcao" required>
+
+            <label for="a">Digite o valor inicial do intervalo (a):</label>
+            <input type="number" id="a" name="a" required>
+
+            <label for="b">Digite o valor final do intervalo (b):</label>
+            <input type="number" id="b" name="b" required>
+
+            <label for="tolerancia">Digite a tolerância % (ex: 10):</label>
+            <input type="number" step="any" id="tolerancia" name="tolerancia" required>
+
+            <input type="submit" value="Calcular" id="botao">
+        </form>
+
+        <h2 id="result"></h2>
+
+        <table border="1" id="resultado-tabela">
+            <thead id="cabecalho">
+                <tr>
+                    <th>Iteração</th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>f(a)</th>
+                    <th>f(b)</th>
+                    <th>f(c)</th>
+                    <th>Erro (%)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
